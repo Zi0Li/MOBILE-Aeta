@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class Utils {
   Utils._();
 
-
   static const Color primary = Color.fromRGBO(252, 92, 0, 1);
   static const Color dark_primary = Color.fromRGBO(0, 17, 52, 1);
   static const Color white = Colors.white;

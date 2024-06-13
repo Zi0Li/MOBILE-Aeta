@@ -1,4 +1,3 @@
-import 'package:aeta/widgets/appBar.dart';
 import 'package:aeta/widgets/header.dart';
 import 'package:aeta/widgets/icons.dart';
 import 'package:aeta/widgets/nextActivity.dart';
@@ -16,10 +15,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarWidget(),
-      backgroundColor: Utils.backgroundColor,
-      body: Column(
+    return Container(
+      color: Utils.backgroundColor,
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
