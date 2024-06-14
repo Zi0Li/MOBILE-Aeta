@@ -1,4 +1,5 @@
 import 'package:aeta/pages/homepage.dart';
+import 'package:aeta/pages/others.dart';
 import 'package:aeta/widgets/appBar.dart';
 import 'package:aeta/widgets/icons.dart';
 import 'package:aeta/widgets/utils.dart';
@@ -17,9 +18,7 @@ class _MenuPageState extends State<MenuPage> {
   int _selectedIndex = 0;
   static const List<Widget> _pages = <Widget>[
     HomePage(),
-    Text(
-      'Likes',
-    ),
+    OthersPage(),
     Text(
       'Search',
     ),
