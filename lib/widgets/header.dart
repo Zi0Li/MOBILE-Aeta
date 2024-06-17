@@ -9,6 +9,8 @@ class HeaderWidget extends StatefulWidget {
   final String? role;
   final List<Function>? buttonFunctionList;
 
+  static ValueNotifier<int> selectedIndex = ValueNotifier<int>(0);
+
   HeaderWidget({
     required this.name,
     required this.role,
@@ -165,6 +167,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
     return InkWell(
       onTap: () => setState(() {
         _selectButton = index;
+        HeaderWidget.selectedIndex.value = index;
       }),
       child: Column(
         children: [
