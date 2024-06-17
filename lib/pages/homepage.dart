@@ -1,3 +1,4 @@
+import 'package:aeta/pages/notFound.dart';
 import 'package:aeta/widgets/header.dart';
 import 'package:aeta/widgets/icons.dart';
 import 'package:aeta/widgets/nextActivity.dart';
@@ -36,17 +37,9 @@ class _HomePageState extends State<HomePage> {
               if (HeaderWidget.selectedIndex.value == 0) {
                 return _generalBody();
               } else if (HeaderWidget.selectedIndex.value == 1) {
-                return Container(
-                  child: Center(
-                    child: Text('TESTE 01'),
-                  ),
-                );
+                return NotFoundPage();
               } else {
-                return Container(
-                  child: Center(
-                    child: Text('TESTE 02'),
-                  ),
-                );
+                return NotFoundPage();
               }
             },
           )

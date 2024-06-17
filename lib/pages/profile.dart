@@ -1,3 +1,4 @@
+import 'package:aeta/pages/notFound.dart';
 import 'package:aeta/widgets/button.dart';
 import 'package:aeta/widgets/header.dart';
 import 'package:aeta/widgets/input.dart';
@@ -42,35 +43,31 @@ class _ProfilePageState extends State<ProfilePage> {
               'Documentos',
             ],
           ),
-          Flexible(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 26),
-              child: SingleChildScrollView(
-                child: AnimatedBuilder(
-                  animation: Listenable.merge([HeaderWidget.selectedIndex]),
-                  builder: (context, child) {
-                    if (HeaderWidget.selectedIndex.value == 0) {
-                      return Column(
+          AnimatedBuilder(
+            animation: Listenable.merge([HeaderWidget.selectedIndex]),
+            builder: (context, child) {
+              if (HeaderWidget.selectedIndex.value == 0) {
+                return Flexible(
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 26),
+                      child: Column(
                         children: [
                           _generalBody(),
                           SizedBox(
                             height: 26,
                           ),
                         ],
-                      );
-                    } else if (HeaderWidget.selectedIndex.value == 1) {
-                      return Container(
-                        child: Text('Página não encontrada!'),
-                      );
-                    } else {
-                      return Container(
-                        child: Text('Página não encontrada!'),
-                      );
-                    }
-                  },
-                ),
-              ),
-            ),
+                      ),
+                    ),
+                  ),
+                );
+              } else if (HeaderWidget.selectedIndex.value == 1) {
+                return NotFoundPage();
+              } else {
+                return NotFoundPage();
+              }
+            },
           ),
         ],
       ),
