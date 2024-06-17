@@ -13,6 +13,21 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _phoneController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _nameController.text = "Éric Vinicius Nascimento";
+    _emailController.text = "eric@aeta.com.br";
+    _phoneController.text = "(18) 99999-9999";
+    _passwordController.text = "0123456789";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -105,7 +120,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   height: 5,
                 ),
-                InputWidget(),
+                InputWidget(controller: _nameController,),
                 SizedBox(
                   height: 15,
                 ),
@@ -120,7 +135,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   height: 5,
                 ),
-                InputWidget(),
+                InputWidget(controller: _emailController,),
                 SizedBox(
                   height: 15,
                 ),
@@ -135,7 +150,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 SizedBox(
                   height: 5,
                 ),
-                InputWidget(),
+                InputWidget(controller: _phoneController,),
                 SizedBox(
                   height: 15,
                 ),
@@ -151,6 +166,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   height: 5,
                 ),
                 InputWidget(
+                  controller: _passwordController,
                   obscureText: true,
                 ),
               ],

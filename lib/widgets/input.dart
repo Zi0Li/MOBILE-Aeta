@@ -34,18 +34,29 @@ class _InputWidgetState extends State<InputWidget> {
           color: Utils.backgroundColor,
         ),
         child: TextFormField(
+          controller: widget.controller,
           obscureText: widget.obscureText!,
-          style: TextStyle(fontSize: 14),
+          style: GoogleFonts.poppins(
+            fontSize: 16,
+            color: Utils.dark_primary,
+            fontWeight: FontWeight.w400,
+          ),
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(),
-            prefixIcon: Icon(
-              widget.prefixIcon,
-              color: _color,
+            contentPadding: EdgeInsets.symmetric(
+              horizontal: (widget.prefixIcon == null) ? 15 : 0,
             ),
-            suffixIcon: Icon(
-              widget.suffixIcon,
-              color: _color,
-            ),
+            prefixIcon: (widget.prefixIcon == null)
+                ? null
+                : Icon(
+                    widget.prefixIcon,
+                    color: _color,
+                  ),
+            suffixIcon: (widget.suffixIcon == null)
+                ? null
+                : Icon(
+                    widget.suffixIcon,
+                    color: _color,
+                  ),
             hintText: widget.hintText,
             hintStyle: GoogleFonts.poppins(
               fontWeight: FontWeight.w500,
