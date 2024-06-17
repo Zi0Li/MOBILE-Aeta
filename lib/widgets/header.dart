@@ -24,7 +24,11 @@ class HeaderWidget extends StatefulWidget {
 }
 
 class _HeaderWidgetState extends State<HeaderWidget> {
-  int _selectButton = 0;
+  @override
+  void initState() {
+    super.initState();
+    HeaderWidget.selectedIndex.value = 0;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -161,12 +165,11 @@ class _HeaderWidgetState extends State<HeaderWidget> {
   Widget _button({required String text, required int index}) {
     Color colorText = Utils.gray100;
 
-    if (_selectButton == index) {
+    if (HeaderWidget.selectedIndex.value == index) {
       colorText = Utils.primary;
     }
     return InkWell(
       onTap: () => setState(() {
-        _selectButton = index;
         HeaderWidget.selectedIndex.value = index;
       }),
       child: Column(
