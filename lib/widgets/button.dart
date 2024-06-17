@@ -4,7 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ButtonWidget extends StatefulWidget {
   final Function() function;
-  const ButtonWidget({required this.function, super.key});
+  final String text;
+  const ButtonWidget({
+    required this.text,
+    required this.function,
+    super.key,
+  });
 
   @override
   State<ButtonWidget> createState() => _ButtonWidgetState();

@@ -1,4 +1,4 @@
-import 'package:aeta/pages/menu.dart';
+import 'package:aeta/pages/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MenuPage();
+    return LoginPage();
   }
 } 

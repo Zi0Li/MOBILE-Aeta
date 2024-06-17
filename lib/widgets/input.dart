@@ -56,6 +56,7 @@ class _InputWidgetState extends State<InputWidget> {
                 : Icon(
                     widget.suffixIcon,
                     color: _color,
+                    size: 20,
                   ),
             hintText: widget.hintText,
             hintStyle: GoogleFonts.poppins(

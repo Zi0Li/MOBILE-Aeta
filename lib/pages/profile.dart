@@ -1,6 +1,7 @@
 import 'package:aeta/pages/notFound.dart';
 import 'package:aeta/widgets/button.dart';
 import 'package:aeta/widgets/header.dart';
+import 'package:aeta/widgets/icons.dart';
 import 'package:aeta/widgets/input.dart';
 import 'package:aeta/widgets/utils.dart';
 import 'package:flutter/material.dart';
@@ -163,6 +164,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   height: 5,
                 ),
                 InputWidget(
+                  suffixIcon: CustomIcons.eye,
                   controller: _passwordController,
                   obscureText: true,
                 ),
@@ -172,6 +174,7 @@ class _ProfilePageState extends State<ProfilePage> {
               height: 30,
             ),
             ButtonWidget(
+              text: 'ATUALIZAR',
               function: () {
                 print('Teste');
               },

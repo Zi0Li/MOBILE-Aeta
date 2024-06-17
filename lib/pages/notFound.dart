@@ -13,7 +13,7 @@ class NotFoundPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Ops, página em construção',
+            'Ops, página em construção.',
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w400,
               fontSize: 16,
